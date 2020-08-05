@@ -1,0 +1,126 @@
+﻿@model WebApplication4.Models.LeavesDBEntities
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+
+
+
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        nav.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: midnightblue;
+        }
+
+            nav.topnav li {
+                float: left;
+            }
+
+                nav.topnav li a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                    nav.topnav li a:hover:not(.active) {
+                        background-color: #111;
+                    }
+
+                    nav.topnav li a.active {
+                        background-color: #4CAF50;
+                    }
+
+                nav.topnav li.right {
+                    float: right;
+                }
+
+        @@media screen and (max-width: 600px) {
+            nav.topnav li.right,
+            nav.topnav li {
+                float: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="top_panel top_panel_style_2 scheme_default">
+
+        <span style=" font-weight: bold;    font-size: 28px;">Jvs Project</span>
+        <nav class="topnav">
+            @*<nav class="navbar navbar-fixed-top navbar-light bg-primary">*@
+            <ul>
+
+                <li> <a>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</a></li>
+
+                <li> <a>@Html.ActionLink("LeaveDetails", "Index", "Leave", new { area = "" }, null)</a></li>
+
+
+                @*</ul>*@
+            </ul>
+
+        </nav>
+    </header>
+
+    <table style="margin-left: 25%; margin-top: 10px; border: 2px solid LightGray;">
+
+        <tr>
+
+            <th>EmployeeId</th>
+            <th>EmployeeName</th>
+
+            <th>Role</th>
+
+            <th>UserName</th>
+
+            <th>Password</th>
+            <th>MailId</th>
+            <th>PhoneNumber</th>
+<th></th>
+        </tr>
+
+        @foreach (var item in Model.Employees)
+
+        {
+    <tr>
+        <td>@item.EmployeeId</td>
+
+        <td>@item.EmployeeName </td>
+
+
+
+        <td>@item.Role.Role1</td>
+
+
+        <td>@item.UserName</td>
+
+        <td>@item.Password</td>
+        <td>@item.MailId</td>
+        <td>@item.PhoneNumber</td>
+
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = @item.EmployeeId }) |
+            @Html.ActionLink("Details", "Details", new { id = @item.EmployeeId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = @item.EmployeeId })
+        </td>
+   </tr>
+
+
+        }
+
+    </table>
+</body>
+
+</html>

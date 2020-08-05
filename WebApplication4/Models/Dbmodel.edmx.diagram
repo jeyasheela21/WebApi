@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="50d75dc1186a4b0f8838fb7e18f52701" Name="Diagram1">
+        <EntityTypeShape EntityType="LeavesDBModel.Employee" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeavesDBModel.Leave" Width="1.5" PointX="3" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeavesDBModel.LeaveDetail" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeavesDBModel.Role" Width="1.5" PointX="0.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeavesDBModel.Status" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <AssociationConnector Association="LeavesDBModel.FK__Employee__RoleID__267ABA7A" ManuallyRouted="false" />
+        <AssociationConnector Association="LeavesDBModel.FK__LeaveDeta__Emplo__2D27B809" ManuallyRouted="false" />
+        <AssociationConnector Association="LeavesDBModel.FK__LeaveDeta__TypeO__2F10007B" ManuallyRouted="false" />
+        <AssociationConnector Association="LeavesDBModel.FK__LeaveDeta__Leave__2E1BDC42" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
